@@ -1,0 +1,129 @@
+<div ng-controller="createInitiatiefController">
+    <style>
+        .sidebar-collapse #map {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 50px;
+            top: 50px;
+            width: 100%;
+            transition: left .3s linear;
+        }
+
+        #map{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 230px;
+            top: 50px;
+            width: 100%;
+            transition: left .3s linear;
+        }
+
+        #form-wrapper{
+            position: absolute;
+            width: 400px;
+        }
+
+        @media (max-width: 756px) {
+            #map{
+                left: 0;
+            }
+            .sidebar-collapse #map{
+                left: 0;
+            }
+
+        }
+
+        .marker {
+            display: block;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 0;
+        }
+    </style>
+
+    <div id='map'></div>
+    <div id="form-wrapper">
+        <div class="col-sm-12">
+            <div class="box box-succes">
+                <div class="box-header with-border">
+                    <form class="form-horizontal" id="testform" ng-submit="createInitiatief()">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="titel" class="col-sm-2 control-label">Titel</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="initiatief.titel" placeholder="Titel" id="titel" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="initiatief.description" placeholder="Omschrijving" id="omschrijving" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="doel" class="col-sm-2 control-label">Doel</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="initiatief.goals" placeholder="Doel" id="doel" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="team" class="col-sm-2 control-label">Team</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="initiatief.team" placeholder="Teamnaam" id="team" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="locatie" class="col-sm-2 control-label">Locatie</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="initiatief.location" placeholder="Locatie" id="locatie" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="status" class="col-sm-2 control-label">Status</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="initiatief.status" placeholder="Status" id="status" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tags" class="col-sm-2 control-label">Tags</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="initiatief.tags" placeholder="Tags" id="tags" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <input type="submit" class="btn btn-info pull-right" value="Voeg toe">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<form id="testform" ng-submit="createInitiatief()">-->
+        <!--<p class="col-xs-6">Titel</p>-->
+        <!--<input type="text" ng-model="initiatief.titel" placeholder="title" class="col-xs-6">-->
+
+        <!--<p class="col-xs-6">Description</p>-->
+        <!--<input type="text" ng-model="initiatief.description" placeholder="desc" class="col-xs-6">-->
+
+        <!--<p class="col-xs-6">Goals</p>-->
+        <!--<input type="text" ng-model="initiatief.goals" placeholder="goals" class="col-xs-6">-->
+
+        <!--<p class="col-xs-6">Team</p>-->
+        <!--<input type="text" ng-model="initiatief.team" class="col-xs-6" placeholder="team">-->
+
+        <!--<p class="col-xs-6">Location</p>-->
+        <!--<input type="text" ng-model="initiatief.location" class="col-xs-6" placeholder="location">-->
+
+        <!--<p class="col-xs-6">Status</p>-->
+        <!--<input type="text" ng-model="initiatief.status" class="col-xs-6" placeholder="Status">-->
+
+        <!--<p class="col-xs-6">Tags</p>-->
+        <!--<input type="text" ng-model="initiatief.tags" class="col-xs-6" placeholder="tags">-->
+        <!--<button>Add tag</button>-->
+        <!--<input type="submit">-->
+    <!--</form>-->
+</div>

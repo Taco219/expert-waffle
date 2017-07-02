@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="core">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <base href="/">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" type="text/css" href="components/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="components/AdminLTE.min.css">
+    <link rel="stylesheet" type="text/css" href="components/skin-green.css">
+    <link rel="stylesheet" type="text/css" href="components/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!--<script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>-->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+
+    <!--<link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet'>-->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body class="hold-transition skin-green sidebar-mini sidebar-collapse" style="overflow: hidden;">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- logo -->
+            <a href="#" class="logo">
+                <!-- mini logo -->
+                <span class="logo-mini"><b>P</b>GO</span>
+                <!-- logo voor normale staat en mobiel -->
+                <span class="logo-lg"><b>Pokemon</b>GO</span>
+            </a>
+
+            <!-- Header navbar -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle -->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- =========================================== -->
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu">
+                    <li class="header">Titel initatief</li>
+                    <li><a ng-href="initiatieven"><i class="fa fa-home"></i><span>Overzicht</span></a>
+                    <li><a ng-href="initiatieven/create"><i class="fa fa-plus"></i><span>Voeg initiatief toe</span></a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- ========================================== -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-info"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane" id="control-sidebar-home-tab">
+                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                    <p>Will be 23 on April 24th</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+                </div>
+
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+
+        <!-- ========================================== -->
+
+        <div class="content-wrapper">
+            <section class="content">
+                <main ui-view></main>
+            </section>
+        </div>
+    </div>
+</body>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="components/app.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./js/main-min.js"></script>
+
+</html>

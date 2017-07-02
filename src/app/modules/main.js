@@ -1,0 +1,1 @@
+import coreModule from './core/coreModule';

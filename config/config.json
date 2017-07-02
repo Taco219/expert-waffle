@@ -1,0 +1,7 @@
+{
+  "port": 3333,
+  "clientPort": 3000,
+  "mongoUrl": "mongodb://localhost:27017/expert-waffle",
+  "secret": "secret",
+  "serverUrl": "localhost"
+}

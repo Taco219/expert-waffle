@@ -1,0 +1,76 @@
+<div ng-controller="initiatievenController">
+    <style>
+        .sidebar-collapse #map {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 50px;
+            top: 50px;
+            width: 100%;
+            transition: left .3s linear;
+        }
+
+        #map{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 230px;
+            top: 50px;
+            width: 100%;
+            transition: left .3s linear;
+            height: 100%;
+        }
+
+        #testform{
+            top: 550px;
+            position: absolute;
+        }
+
+        @media (max-width: 756px) {
+            #map{
+                left: 0;
+            }
+            .sidebar-collapse #map{
+                left: 0;
+            }
+        }
+
+        .marker {
+            display: block;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 0;
+        }
+
+
+    </style>
+
+    <div id='map'></div>
+
+    <script>
+    /*    L.mapbox.accessToken = '<pk.eyJ1IjoidGFjbzIxOSIsImEiOiJjajRrNnhzbnQwa3d2MzJzZXR6NmxzNmw5In0.X8H6i84oY5DxKkbwrTaGyw>';
+        var geojson = [
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-77.031952, 38.913184]
+                }
+            },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-122.413682, 37.775408]
+                }
+            }
+        ];
+
+        var mapGeo = L.mapbox.map('map_geo', 'mapbox.light')
+            .setView([37.8, -96], 4);
+
+        var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapGeo);
+        mapGeo.scrollWheelZoom.disable();*/
+    </script>
+</div>
