@@ -17,13 +17,8 @@
     "cors": "^2.8.3",
     "express": "^4.15.3",
     "jsonwebtoken": "^7.4.1",
-    "jwt-async": "^1.1.2",
     "mongoose": "^4.11.1",
-    "mongoose-hidden": "^1.4.0",
-    "node-forge": "^0.7.1",
-    "node-rsa": "^0.4.2",
-    "secp256k1": "^3.3.0",
-    "sha256": "^0.2.0"
+    "mongoose-hidden": "^1.4.0"
   },
   "babel": {
     "presets": [

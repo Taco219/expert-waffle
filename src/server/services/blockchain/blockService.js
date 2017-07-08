@@ -1,6 +1,6 @@
 import * as hash from './hashService';
-import { blockModel as Block }from '../models/blockModel';
-import errNo from '../enumerators/errorEnum'
+import { blockModel as Block }from '../../models/blockModel';
+import errNo from '../../enumerators/errorEnum'
 
 
 export const findBlock = async (input) => {

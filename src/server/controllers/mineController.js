@@ -1,4 +1,4 @@
-import * as blockService from '../services/blockService';
+import * as blockService from '../services/blockchain/blockService';
 
 export const mine = async () => {
     try {
