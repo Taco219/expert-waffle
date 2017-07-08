@@ -1,9 +1,15 @@
 const express = require('express');
 const htest = require('sha256');
+const crypto = require('crypto');
+const forge = require('node-forge');
+
+const { randomBytes } = require('crypto');
+const secp256k1 = require('secp256k1');
+
+const rsa = forge.pki.rsa;
 
 const router = express.Router();
 
-import { stringify } from '../services/genericService';
 import { hash } from '../services/hashService';
 
 router.get('/test/:test', (req, res)=> {
@@ -53,6 +59,36 @@ router.get('/2/:test', async (req, res)=> {
     res.send(c)
     // res.send(true.toString())
 });
+
+router.get('/rsa', (req, res) => {
+    let msg = randomBytes(64);
+    let str = msg.toString('hex');
+    let a = new Buffer('random');
+
+    console.log(msg.toString('hex'));
+    console.log(new Buffer(str));
+    // msg = new Buffer(msg);
+
+    // generate privKey
+    let privKey;
+    do {
+        privKey = randomBytes(64)
+    } while (!secp256k1.privateKeyVerify(privKey));
+
+// get the public key in a compressed format
+    const pubKey = secp256k1.publicKeyCreate(privKey);
+    // console.log(pubKey);
+
+// sign the message
+    const sigObj = secp256k1.sign(msg, privKey);
+    console.log('s ', sigObj.signature.toString('hex'));
+// verify the signature
+    console.log(secp256k1.verify(msg, sigObj.signature, pubKey));
+
+    res.send('test');
+});
+
+
 
 
 

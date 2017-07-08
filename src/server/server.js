@@ -5,7 +5,6 @@ import { configureServer } from './server.configuration'
 const express = require('express');
 const mongoose = require('mongoose');
 const http = require('http');
-const Promise = require('bluebird');
 
 const app = express();
 const server = http.createServer(app);
@@ -13,10 +12,11 @@ const server = http.createServer(app);
 const routerApi = express.Router();
 
 // config
-configureServer().then(function () {
-    mongoose.Promise = Promise;
+configureServer().then(async () => {
+    mongoose.Promise = global.Promise;
 
-    mongoose.connect(process.config.mongoUrl, {useMongoClient: true});
+    await mongoose.connect(process.config.mongoUrl);
+    console.log('Connected to mongo');
 
     expressConfiguration(app);
 
