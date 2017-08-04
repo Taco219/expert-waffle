@@ -7,9 +7,11 @@ const router = express.Router();
 // login
 router.post('/login', async(req, res)=> {
     try {
+        console.log(req.body);
         const user = req.body.user;
-        const a = UserC.login(user);
-        res.status(a.code).json(a);
+        const loginResponse = await UserC.login(user);
+
+        res.status(loginResponse.code).json(loginResponse);
     }
     catch (err) {
         console.error(err);
@@ -18,20 +20,25 @@ router.post('/login', async(req, res)=> {
 
 });
 
+router.post('/login1', async(req, res)=> {
+    console.log(req.body);
+
+    res.send('test');
+
+});
+
+
 // register
 router.post('/', async(req, res)=> {
     try {
         const user = req.body.user;
-        console.log('typeof UserC.create()');
-        console.log(UserC);
-        const a = await UserC.create(user);
-        res.status(a.code).json(a);
+        const response = await UserC.create(user);
+        res.status(response.code).json(response);
     }
     catch (err){
         console.error(err);
         res.send(err);
     }
-
 });
 
 // get by id
